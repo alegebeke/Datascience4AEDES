@@ -94,7 +94,7 @@ df <- droplevels(subset(df, oge_oge_type %in% c("AP", "EW", "MA")))
 ## Test set ook filteren
 ```{r}
 # leeftijd -1 eruit (onbekend?)
-df.tst <- df.tst[df.trn$hrdr_leeftijd_contractant>0,]
+df.tst <- df.tst[df.tst$hrdr_leeftijd_contractant>0,]
 # KANG en ZW eruit voor nu te weinig datapunten, en drop levels
 df.tst <- droplevels(subset(df.tst, oge_oge_type %in% c("AP", "EW", "MA"))) 
 # remove levels in factors
